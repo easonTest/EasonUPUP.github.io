@@ -1,18 +1,18 @@
 # Site settings
-title: Eason's Blog
-SEOTitle: Eason的部落格|Eason's Blog
-header-img: img/pagehome1.jpg
+title: UVA CPS
+SEOTitle: TEST|UVA CPS
+header-img: img/pagehome2.png
 email: eason1chen@gmail.com
 description: "Hello World"
 keyword: "Code Home"
-url: "https://alberthg.github.io"          # your host, for absolute URL
+url: "https://easonupup.github.io/"          # your host, for absolute URL
 baseurl: ""      # for example, '/blog' if your blog hosted on 'host/blog'
 github_repo: "https://github.com/EasonUPUP/EasonUPUP.github.io.git" # you code repository
 
 
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
-sidebar-about-description: "From JINAN UNIVERSITY"
+sidebar-about-description: "From University of Virginia"
 sidebar-avatar: /img/myP.JPG     # use absolute URL, seeing it's used in both `/` and `/about/`
 
 
