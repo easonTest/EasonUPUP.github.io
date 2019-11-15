@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      Caffe Mnist 实例
+title:      Caffe Mnist(Test Page 2)
 subtitle:    "\"【Caffe-windows】 Minst\""
 date:       2018-04-13
 author:     Eason
