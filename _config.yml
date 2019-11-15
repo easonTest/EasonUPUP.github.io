@@ -51,9 +51,9 @@ gitalk:
   enable: true    #是否开启Gitalk评论
   clientID: 60766904dab560d85c4d                            #生成的clientID
   clientSecret: 023a62f9067c73d7a1bc3993307063633dba3e6b   #生成的clientSecret
-  repo: alberthg.github.io    #仓库名称
-  owner: AlbertHG    #github用户名
-  admin: AlbertHG
+  repo: easonupup.github.io    #仓库名称
+  owner: easonupup    #github用户名
+  admin: easonupup
   distractionFreeMode: true ##是否启用类似FB的阴影遮罩
 
 
