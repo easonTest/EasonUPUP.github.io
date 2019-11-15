@@ -1,9 +1,9 @@
 ---
 layout:     post
 title:      Caffe Mnist 实例
-subtitle:    "\"【Caffe-windows】 Minst实例过程记录\""
+subtitle:    "\"【Caffe-windows】 Minst\""
 date:       2018-04-13
-author:     Canary
+author:     Eason
 header-img: img/caffe_mnist.jpg
 catalog: true
 tags:
@@ -11,8 +11,6 @@ tags:
     - mnist
     - python3
     - windows
-    - 记录
-    - 笔记
 ---
 
 ## 前言

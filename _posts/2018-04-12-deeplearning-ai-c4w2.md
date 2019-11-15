@@ -1,16 +1,15 @@
 ---
 layout:     post
-title:      深度卷积网络：实例探究
+title:      Test passage 1
 subtitle:    "\"deeplearning.ai-Class4-Week2\""
 date:       2018-04-12
-author:     Canary
+author:     Eason
 header-img: img/deeplearning_c4_w2.jpg
 catalog: true
 tags:
-    - 深度学习
-    - 笔记
+    - CPS
+    - NRT
     - deeplearning.ai
-    - 网易云课堂
     - Andrew NG
 ---
 
