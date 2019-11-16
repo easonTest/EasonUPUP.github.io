@@ -25,19 +25,19 @@ Ethically Aligned Design: A Vision for Prioritizing Human Well-being with Autono
 
 As the author introduced in the executive summary, there are five parts in this paper:
 
-* I. Purpose of Ethically Aligned Design, First Edition (EAD1e) 
+* I. Purpose of Ethically Aligned Design, First Edition (EAD1e) :
 The purpose of EAD is making a guidance for Autonomous and Intelligent Systems Design. 
 
-* II. General Principles
+* II. General Principles:
 General principles are listed including human rights, well-being, data agency, effectiveness, transparency, accountability and awareness of misuse.
 
-* III. Ethical Foundations
+* III. Ethical Foundations:
 This paper addresses the alleged potential for autonomous capacity of intelligent technical systems, morality in amoral systems, and exams whether decisions made by amoral systems can have moral consequences.
 
-* IV. Areas of Impact
+* IV. Areas of Impact:
 Including A/IS for Sustainable Development, Personal Data Rights and Agency Over Digital Identity, Legal Frameworks for Accountability and Policies for Education and Awareness.
 
-* V. Implementation
+* V. Implementation:
 Well-being metrics help to find potential benefits and test the negative consequences of an accident. Embedding values into autonomous and intelligent systems are required but the using way needs discussion. Methods to guide and affective computing are mentioned that human is the priority and emotional experience should not be affected.
 
 

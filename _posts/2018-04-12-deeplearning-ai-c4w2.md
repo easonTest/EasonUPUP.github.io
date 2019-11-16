@@ -1,252 +1,200 @@
 ---
 layout:     post
-title:      Test passage 1
-subtitle:    "\"deeplearning.ai-Class4-Week2\""
-date:       2018-04-12
-author:     Eason
+title:      Link Lab with EAD
+subtitle:    "\"Living Link Lab (LLL) study and the ways in which it does or does not meet the criteria for complying with best practice ethics\""
+date:       2019-11-15
+author:     Liz
 header-img: img/deeplearning_c4_w2.jpg
 catalog: true
 tags:
-    - CPS
-    - NRT
-    - deeplearning.ai
-    - Andrew NG
+    - Link Lab
+    - EAD
+    - Ethical Analysis
 ---
+**Introduction**
 
-## [GitHub项目传送门](https://github.com/AlbertHG/Coursera-Deep-Learning-deeplearning.ai)
+The Link Lab is on the leading edge of collaborative workspaces in academic research, with the goal of improving the fields of Smart Health, Smart Cities and Autonomous Systems. As such the Link Lab has engaged in a monumental study, aimed to further current research on the ways Smart Buildings can learn from and respond to its users, creating a more comfortable and productive environment.
 
-> 欢迎Star
+This is a new frontier for research, and as such it&#39;s important to review, and study policies and guidelines to ensure that they comply with the principles of ethical and informed research. This report aims to examine the Living Link Lab (LLL) study and the ways in which it does or does not meet the criteria for complying with best practice ethics [3].
 
-## 为什么要进行实例探究(Why look at case studies?)
+**Executive Summary**
 
-计算机视觉研究中的大量研究都集中在如何把这些基本构件组合起来，形成有效的卷积神经网络。最直观的方式之一就是去看一些案例，就像很多人通过看别人的代码来学习编程一样，通过研究别人构建有效组件的案例是个不错的办法。实际上在计算机视觉任务中表现良好的神经网络框架往往也适用于其它任务。也就是说，如果有人已经训练或者计算出擅长识别猫、狗、人的神经网络或者神经网络框架，而你的计算机视觉识别任务是构建一个自动驾驶汽车，你完全可以借鉴别人的神经网络框架来解决自己的问题。
+1. _Purpose_
 
-## 经典网络(Classic networks)
+Research is important, and the necessity of it is clear. However, historically research has not always been conducted in an ethical or humane manner. As responsible engineering researchers it is our responsibility to ensure that any research we take part in adheres to ethical best practices for autonomous systems and human research. This report aims to be a thorough analysis and critique of current study framework; additionally this report will provide suggested ethical guidelines and framework to bring the LLL Research further in-line with the guiding principles of Ethically Aligned Design and ethical human research [3].
 
-#### LeNet-5
+1. _General Principles_
 
-![](https://raw.githubusercontent.com/AlbertHG/Coursera-Deep-Learning-deeplearning.ai/master/04-Convolutional%20Neural%20Networks/week2/md_images/01.png)
+The Ethically Aligned Design (EAD) report was developed out of a need for a framework of  principles that any researcher working with A/IS systems should adhere to [1]. It emphasises the need for transparency and clarity at all times for A/IS systems, and has built in considerations for users and non-users of the technology [1]. Similarly, the Belmont Report (BR) was created in 1978 to create an ethical framework of best practice principles for human research [2]. Similar to the EAD, the BR emphasizes the need for human autonomy, including informed consent and the principle of beneficence. The LLL study, as it is designed, falls under the aegis of both sets of ethical guidelines, involving both human research and autonomous systems [3]. This necessitates finding a way to align the study&#39;s implementation with both ethical frameworks.
 
-从左往右看，随着网络越来越深，图像的高度和宽度在缩小，从最初的 32×32 缩小到 28×28，再到 14×14、10×10，最后只有 5×5。与此同时，随着网络层次的加深，通道数量一直在增加，从 1 增加到 6 个，再到 16 个。
+| Ethically Aligned Design | Belmont Report |
+| --- | --- |
+| Human Rights | Respect for Persons |
+| Well-being | Beneficence |
+| Data Agency | Justice |
+| Effectiveness | Informed Consent |
+| Transparency | Assessment of Risks and Benefits |
+| Accountability | Selection of Subjects |
+| Awareness of Misuse |   |
+| Competence |   |
 
-在过去，人们使用sigmoid函数和tanh函数，而不是ReLu函数，这篇论文正是使用了sigmoid函数和tanh函数，这种网络结构特别之处在于，各网络层之间是有关联的。比如，一个$n_H \times n_W \times n_C$ ，有$n_C$个通道，使用尺寸$f \times f \times n_C$的过滤器，每个过滤器的通道数和它上一层相同。
+Table 1a. The principles of EAD and BR [1],[2]
 
-相关论文：[LeCun et.al., 1998. Gradient-based learning applied to document recognition](http://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=726791&tag=1)在阅读这篇论文的时候，建议阅读第二段，重点介绍了网络的结构，泛读第三段，介绍了有趣的实验结果。
+**Ethical Analysis**
 
-特点：
+_  I._ _Consent_
 
-* LeNet-5 针对灰度图像而训练，因此输入图片的通道数为 1。
-* 该模型总共包含了约 6 万个参数，远少于标准神经网络所需。
-* 典型的 LeNet-5 结构包含卷积层(CONV layer)，池化层(POOL layer)和全连接层(FC layer)，排列顺序一般为 CONV layer->POOL layer->CONV layer->POOL layer->FC layer->FC layer->OUTPUT layer。一个或多个卷积层后面跟着一个池化层的模式至今仍十分常用。
-* 当 LeNet-5模型被提出时，其池化层使用的是平均池化，而且各层激活函数一般选用 Sigmoid 和 tanh。现在，我们可以根据需要，做出改进，使用最大池化并选用 ReLU 作为激活函数。
+As mentioned in the BR[1] Informed consent is an essential part of human research. However, this principle appears to have been missed in the design of the LLL project [3]. While the proposal does state that the research would be IRB compliant, it does not detail how the researchers intend to do so [3]. In fact, currently there are no notifications or signs on any of the entrances to Link Lab alerting people to the fact that data are being gathered inside the building utilizing visible sensors. The lack of notice on the entrances means that individuals are not given the ability to make an informed decision about having their data collected.
 
-#### AlexNet
+Another part of informed consent in both the EAD and BR is the right to decline participation [1], [2]. Currently there does not appear to be any plans in place for individuals who do not want their data collected while visiting the Link Lab [3]. This means that individuals would be barred from entering the Link Lab because they did not want to participate in the LLL study. This is in direct contrast to the principles of the EAD and BR, both of which place a high emphasis on respecting human autonomy and not penalizing non-users who in this situation are those who choose not to participate [1], [2].
 
-![](https://raw.githubusercontent.com/AlbertHG/Coursera-Deep-Learning-deeplearning.ai/master/04-Convolutional%20Neural%20Networks/week2/md_images/02.png)
+The LLL proposal also mentions the use of wearable technology and Sensus to assess anxiety and depression [3]. Given that there are individuals in the Link Lab with anxiety and/or depression that kind of data collection could be very uncomfortable, and the results potentially stigmatizing. It is understandable that these individuals might wish to opt out of that part of the study, while still participating in the other sections of the study. However, the LLL proposal
 
-特点：
+lacks any framework to protect that non-user population. Additionally there is no mention in the proposal on handling participants who may be comfortable consenting to some parts of the study, but not others. Both the EAD and the BR include principles of ensuring the wellbeing of humans, which in this case includes both users and non-users [1], [2].
 
-* AlexNet 模型与 LeNet-5 模型类似，但是更复杂，包含约 6000 万个参数。另外，AlexNet 模型使用了 ReLU 函数。
-* 当用于训练图像和数据集时，AlexNet 能够处理非常相似的基本构造模块，这些模块往往包含大量的隐藏单元或数据。
+Additionally the study design does not include plans for how to handle people who can&#39;t, by definition, consent to having their information recorded and used in a study [3]. This group generally includes anyone under the age of 18, and anyone over the age of 18 who is legally unable to enter into contracts.
 
-相关论文：[Krizhevsky et al.,2012. ImageNet classification with deep convolutional neural networks](http://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks.pdf)。这是一篇易于理解并且影响巨大的论文，计算机视觉群体自此开始重视深度学习。
 
-#### VGG
 
-![](https://raw.githubusercontent.com/AlbertHG/Coursera-Deep-Learning-deeplearning.ai/master/04-Convolutional%20Neural%20Networks/week2/md_images/03.png)
+_    II. Transparency_
 
-特点：
+In addition to consent, transparency is also a core part of ethical human research, specifically transparency regarding what data is being collected, where it is being collected, and what is being done with the data. In the EAD this is the Data Agency principle, which states that all A/IS creators must ensure that individuals can access and securely share their data, allowing individuals to maintain control over their information. In the BR this concept is covered under the Respect for Persons and Informed Consent principles, which combined state that participants must be able to make informed decisions about whether they want to participant initially, and that they continuously be able to make informed decisions about what activities they want to participate in and why. Additionally individuals are who are unaware that data was collected are unable to request their data be deleted.
 
-* VGG 又称 VGG-16 网络，“16”指网络中包含 16 个卷积层和全连接层。
-* 超参数较少，只需要专注于构建卷积层。
-* 结构不复杂且规整，都是几个卷积层后面跟着可以压缩图像大小的池化层，池化层缩小图像的高度和宽度。同时，卷积层的过滤器数量变化存在一定的规律，由 64 翻倍变成 128，再到 256 和 512。
-* 主要缺点是VGG 需要训练的特征数量巨大，包含多达约 1.38 亿个参数。
+Additionally, participants should be able to know which rooms are collecting what types of data, and how the data was being utilized. For example, cameras are mentioned in the LLL proposal, can participants assume the bathrooms will not have cameras [3]? Some of this information is available in the proposal but that proposal is not accessible to participants [3]. The proposal itself does not have a plan detailing how that information will be made available [3].
 
-相关论文：[Simonvan & Zisserman 2015. Very deep convolutional networks for large-scale image recognition](https://arxiv.org/pdf/1409.1556.pdf)。
+1. _Wellbeing of Inhabitants_
 
-**建议从介绍 AlexNet 的论文开始，然后就是 VGG 的论文，最后是 LeNet 的论文。**
+Both the EAD and the BR include principles of ensuring the wellbeing of humans, both users and non-users [1],[2]. In line with these principles, the LLL proposal references having inobtrusive mechanisms for gathering data, such as sensors and cameras [3]. The researchers also emphasized the many of these devices would require no interaction from the participant, such as the would be no-touch sensors [3]. Additionally the proposal also mentioned data would be measured using Humanyze badges, which are designed to not record sensitive data and to deidentify the data [3].
 
-## 残差网络(Residual Networks(ResNets))
+Another important consideration in the wellbeing of occupants is how to handle users vs non-users. As mentioned previously the LLL proposal does not have a way for people to opt out of part, or all, of the study short of refusing to enter the building [3]. In other words, the LLL study violates the autonomy of the occupants of the lab, a significant negative impact on their mental health. Individuals outside of the lab will likely face criticism and stigma if they refuse to enter the Link Lab.
 
-非常深的网络很难训练，存在着梯度消失和梯度爆炸的问题，但是通过跳跃连接(Skip connection)，可以从某一层网络层获取激活，然后迅速反馈给另外一层。
+As previously mentioned part of the LLL study involves the use of sensing badges, asset tags, and wrist-worn watches to gather data with the goal of helping improve occupants mental state [3]. However, that same data can be used to identify mental illness, for example there is evidence supporting the use of heart rate variability as diagnostic markers for Major Depressive Disorder and Bipolar Disorder [4]. The LLL is unclear on whether the HRV data will also be deidentified, which creates a risk that a participant will be identified as having a mental illness without their consent [3].
 
-ResNet是由残差块(Residual block)构成：
+Assuming that occupants of the Link Lab are able to opt out of [part of] the study, what considerations have researchers take to reduce stigma against non-users? For example the badges and wrist watches are clearly visible indicators of participation, so people without them are easily identified as non-participants. The LLL proposal does include a plan for handling stigma against non-users, which is counter to the EAD principle of Well-being and the BR principle of Beneficence [1], [2].
 
-![](https://raw.githubusercontent.com/AlbertHG/Coursera-Deep-Learning-deeplearning.ai/master/04-Convolutional%20Neural%20Networks/week2/md_images/04.jpg)
+Another consideration in line with the principles of well-being and beneficence is the impact that always being monitored will have on the occupants of the Link Lab. Nothing in the proposal indicates any framework or considerations put in place to detect potential negative impacts caused by the monitoring, or to mitigate any resulting harm to participants [3]. This would be a requirement for the LLL to be aligned with the ethical principles of the EAD and BR [1], [2].
 
-**残差块(Residual block)**。通过**捷径（Short cut，或者称跳远连接，Skip connections）**可以将 $a^{[l]}$添加到第二个 ReLU 过程中，直接建立 $a^{[l]}$与 $a^{[l+2]}$之间的隔层联系。表达式如下：
+A final consideration is the effect of autonomous robots on inhabitants of the lab. Currently there are people in the Link Lab who need to utilize canes or crutches, what steps are being taken to safeguard the AI/S so they do not cause a collision, or to prevent them from knocking someone&#39;s cane or crutch over? Consideration for individuals with disabilities is a key part of the BR&#39;s Respect for Person principle; There does not appear to be any framework for impact on individuals with disabilities in the LLL proposal [3].
 
-![](https://raw.githubusercontent.com/AlbertHG/Coursera-Deep-Learning-deeplearning.ai/master/04-Convolutional%20Neural%20Networks/week2/md_images/08.jpg)
 
-- Linear：$z^{[l+1]} = W^{[l+1]}a^{[l]} + b^{[l+1]}$
 
-- Relu：$a^{[l+1]} = g(z^{[l+1]})$
+1. _Competence and Accountability_
 
-- Linear：$z^{[l+2]} = W^{[l+2]}a^{[l+1]} + b^{[l+2]}$
+Research requires many abilities, including the ability to recognize and account for potential bias factors. The Link Lab is a multicultural environment, with people from a multitude of countries and cultural backgrounds. Additionally there are also people of different races, religions, gender identities, sexual orientations, ages, and individuals with disabilities.  In such a diverse environment, how will the data be collected and processed in a way that will correctly account for differences caused by various factors, while still remaining deidentified? The LLL proposal doesn&#39;t have any guidelines for how they will account for cultural differences in facial expressions, or tone/cadence of vocalizations [3]. As mentioned in a previous section, HRV can differ significantly due to some mental illnesses, how will that kind of information be accounted for so it doesn&#39;t falsely skew the data? These questions are in line with two principles of the EAD, Accountability and Competence. In the EAD framework to be &#39;accountable&#39; A/IS systems are required to provide rationale for their decisions at all times; the principle of Competence states that A/IS shall adhere to the knowledge and skill required for safe operation. To better adhere to those principles, the LLL needs to have framework that will catch potential sources of unwanted variance (ie HRV differences due to medical, not environment), that way they can be excluded from the data for that particular factor.
 
-- Relu：$a^{[l+2]} = g(z^{[l+2]} + a^{[l]})$
+1. Security
 
-构建一个残差网络就是将许多残差块堆积在一起，形成一个深度网络。
+Security is paramount in research, and doubly so when you are working with human subjects. The LLL proposal mentions that one of the Co-PIs is working on creating new security technologies for protecting user privacy, which is perfectly aligned with the EAD principles of Competence, Data Agency and Awareness of Misuse [1],[3]. Additionally, as mentioned in the proposal, the Link Lab is a limited access facility, so it has a higher hardware security than many other workspaces would. There do not appear to be any issues with the security level measures outlined by the LLL proposal.
 
-![](https://raw.githubusercontent.com/AlbertHG/Coursera-Deep-Learning-deeplearning.ai/master/04-Convolutional%20Neural%20Networks/week2/md_images/05.jpg)
 
-为了便于区分，在 ResNets 的论文[He et al., 2015. Deep residual networks for image recognition](https://arxiv.org/pdf/1512.03385.pdf)中，非残差网络被称为**普通网络(Plain Network)**。将它变为残差网络的方法是加上所有的跳远连接。
 
-![](https://raw.githubusercontent.com/AlbertHG/Coursera-Deep-Learning-deeplearning.ai/master/04-Convolutional%20Neural%20Networks/week2/md_images/06.jpg)
+**Summary**
 
-如果使用标准优化算法训练一个普通网络，比如说梯度下降法，或者其它热门的优化算法。如果没有残差，没有这些捷径或者跳跃连接，会发现随着网络深度的加深，训练错误会先减少，然后增多。但有了 ResNets 就不一样了，即使网络再深，训练的表现却不错，比如说训练误差减少，就算是训练深达 100 层的网络也不例外。
+The Link Lab has done many amazing things so far, and will continue to do them in the future. However significant work needs to be done to bring the Living Link Lab (LLL) study, and to some extent the Link Lab as a whole, into alignment with the principles of the Ethically Aligned Design (EAD) and the Belmont Report (BR). This report focused on the EAD principles of Human Rights, Well-being, Data Agency, Accountability, Awareness of Misuse and Competence. The BR report focused on the principles of Respect for Persons, Beneficence, Informed Consent, as well as Assessment of Risks and Benefits. I focused on these principles from the two ethical frameworks because I believed that they were the most relevant to the LLL research study, as well as the Link Lab as its own entity. The other principles were unused in this report.
 
-![](https://raw.githubusercontent.com/AlbertHG/Coursera-Deep-Learning-deeplearning.ai/master/04-Convolutional%20Neural%20Networks/week2/md_images/07.jpg)
+The  recommendations listed below are designed to improve LLL and help shift the study into greater congruence with the EAD and BR. This will ensure that as Link Lab researchers, we can perform ethical research even at the cutting edge of our respective fields.
 
-## 为什么残差有用？(Why ResNets work?)
+**Recommendations**
 
-假设有一个大型神经网络，其输入为 $X$，输出为 $a^{[l]}$。给这个神经网络额外增加两层，输出为 $a^{[l+2]}$。将这两层看作一个具有跳远连接的残差块。为了方便说明，假设整个网络中都选用 ReLU 作为激活函数，包括输入 X 的非零异常值,因此输出的所有激活值都大于等于 0。
+The following points are recommendations for bringing the Living Link Lab Project more aligned with the EAD and BR.
 
-![](https://raw.githubusercontent.com/AlbertHG/Coursera-Deep-Learning-deeplearning.ai/master/04-Convolutional%20Neural%20Networks/week2/md_images/09.jpg)
+- Devise a plan to provide participants with information regarding the data being collected and the location the data is being collected from.
+  - The Link Lab needs signs on the door informing people that their data are being collected.
+  - Pamphlets or a laminated handout available at the side of the entrance for people who greater detail.
 
-则有
+- People should have the ability to opt out of having their information collect.
 
-$$
-\begin{equation}
-\begin{split}
- a^{[l+2]} &= g(z^{[l+2]}+a^{[l]})  
-     \\\ &= g(W^{[l+2]}a^{[l+1]}+b^{[l+2]}+a^{[l]})
-\end{split}
-\end{equation}
-$$
+- Design is needed for people to be able to access their own information
 
-当发生梯度消失时，$W^{[l+2]}\approx0$，$b^{[l+2]}\approx0$，则有：
+- LLL project needs framework/protocol for when someone who legally cannot consent enter the Link Lab.
 
-$$a^{[l+2]} = g(a^{[l]}) = ReLU(a^{[l]}) = a^{[l]}$$
+- The LLL project needs to have a framework in place for users vs. non-users
+  - Mechanisms for handling stigma against people who don&#39;t participate.
 
-所以给大型神经网络增加两层，不论是把残差块添加到神经网络的中间还是末端位置，都不会影响网络的表现，残差网络起作用的主要原因就是这些残差块学习恒等函数非常容易，你能确定网络性能不会受到影响，很多时候甚至可以提高效率，或者说至少不会降低网络的效率，因此创建类似残差网络可以提升网络性能。
+- Researchers need to outline the steps being taken to deidentify the information, especially as some information can be used as identifiers for mental health issues.
 
-通过使用same卷积，使得$z^{[l+2]}$和$a^{[l]}$具有相同的维度。但如果两者维度不一样，则需要额外引入矩阵 $W_s$与 $a^{[l]}$相乘，使得二者的维度相匹配。参数矩阵 $W_s$既可以通过模型训练得到，也可以作为固定值。
+- Framework/Robot rule set needs to be developed to reduce the likelihood that the robot will knock someone&#39;s cane or crutch away from them.
 
-下图展示了通过添加跳跃连接来将普通网络转化为残差网络。这个网络有很多层 3×3 卷积，而且它们大多都是 same 卷积，这就是添加等维特征向量的原因。所以这些都是卷积层，而不是全连接层，因为它们是 same 卷积，维度得以保留，这也解释了添加项$z^{[l+2]}+a^{[l]}$（维度相同所以能够相加)
 
-![](https://raw.githubusercontent.com/AlbertHG/Coursera-Deep-Learning-deeplearning.ai/master/04-Convolutional%20Neural%20Networks/week2/md_images/10.png)
 
-普通网络和 ResNets 网络常用的结构是：卷积层-卷积层-卷积层-池化层-卷积层-卷积层-卷积层-池化层……依此重复。直到最后，有一个通过 softmax 进行预测的全连接层。
+References
 
-## 网络中的网络以及1x1卷积(Network in Network and 1×1 convolutions)
+[1]         The IEEE Global Initiative on Ethics of Autonomous and Intelligent Systems. Ethically Aligned Design: A Vision for Prioritizing Human Well-being with Autonomous and Intelligent Systems, First Edition. IEEE, 2019. [https://standards.ieee.org/content/ieee-standards/en/industry-connections/ec/Autonomous-systems.html](https://standards.ieee.org/content/ieee-standards/en/industry-connections/ec/Autonomous-systems.html)
 
-1x1 卷积（1x1 convolution，或称为 Network in Network）指过滤器的尺寸为 1。当通道数为 1 时，1x1 卷积意味着卷积操作等同于乘积操作。
+[2]        National Commission for the Protection of Human Subjects of Biomedical and Behavioral Research, &quot;The Belmont report: Ethical principles and guidelines for the protection of human subjects of research,&quot; HHS.gov, 15-Jan-2018. [Online]. Available: https://www.hhs.gov/ohrp/regulations-and-policy/belmont-report/read-the-belmont-report/index.html. [Accessed: 15-Nov-2019].
 
-![](https://raw.githubusercontent.com/AlbertHG/Coursera-Deep-Learning-deeplearning.ai/master/04-Convolutional%20Neural%20Networks/week2/md_images/11.png)
+[3]        University of Virginia. Living Link Lab Proposal. UVACollab, 28-Oct-2019. [Online]. Available: [https://collab.its.virginia.edu/](https://collab.its.virginia.edu/portal/site/a465c6ce-3114-459e-bfc5-2cea32848399/tool/7bcb2956-6498-47db-9fc0-1081e6431cf9?panel=Main) [Accessed: 15-Nov-2019]
 
-如果是一张 6×6×32 的图片，那么使用 1×1 过滤器进行卷积效果更好。具体来说，1×1 卷积所实现的功能是遍历这 36 个单元格，计算左图中 32 个数字(通道)和过滤器中 32 个数字(通道)的元素积之和，然后应用 ReLU 非线性函数。
+[4]        Bassett, D. (2016). A literature review of heart rate variability in depressive and bipolar disorders. Australian &amp; New Zealand Journal of Psychiatry, 50(6), 511–519. https://doi.org/10.1177/0004867415622689
 
-![](https://raw.githubusercontent.com/AlbertHG/Coursera-Deep-Learning-deeplearning.ai/master/04-Convolutional%20Neural%20Networks/week2/md_images/12.png)
 
-这个 1×1×32 过滤器中的 32 个数字可以这样理解，一个神经元的输入是 32 个数字（输入图片中左下角位置 32 个通道中的数字），即相同高度和宽度上某一切片上的 32 个数字，这 32 个数字具有不同通道，乘以 32 个权重（将过滤器中的 32 个数理解为权重），然后应用 ReLU 非线性函数，在这里输出相应的结果。
 
-如果过滤器不止一个，而是多个（filters个），就好像有多个输入单元，输出结果是 6×6x#filters（过滤器数量）。
+Ethics
 
-池化能压缩数据的高度($n\_H$)及宽度($n\_W$)，而 1×1 卷积能压缩数据的通道数($n\_C$)。在如下图所示的例子中，用 32 个大小为 1×1×192 的滤波器进行卷积，就能使原先数据包含的 192 个通道压缩为 32 个。
+1. To be aligned with the EAD, the LL really should have a standardized code of ethics
+  1. Why is this? Tolu mentioned it and I feel like it&#39;s true, but why?
+2. LL doesn&#39;t define privacy information
 
-![](https://raw.githubusercontent.com/AlbertHG/Coursera-Deep-Learning-deeplearning.ai/master/04-Convolutional%20Neural%20Networks/week2/md_images/13.png)
+1.
+  1.
+    1. That is definitely required to be in line with the EAD
+      1. Especially since simply entering the LL gives consent to have information gathered
+  2. Documentation on the privacy and ethics information should be freely available to everyone entering the lab or considering whether they should enter the lab.
+  3. Better safety training for equipment in the lab (ie some of the machines should we use a fire extinguisher if they go off and we are working with them?)
+  4. Requiring training of researchers aside from the most basic IRB stuff.
+  5. if working with medical records shouldn&#39;t they have a crash course in HIPPA?
 
-1×1 卷积层就是这样实现了一些重要功能的(doing something pretty non-trivial)，它给神经网络添加了一个非线性函数，从而减少或保持输入层中的通道数量不变，也可以增加通道数量。这对构建 Inception 网络很有帮助。
+Research Design
 
-虽然论文[Lin et al., 2013. Network in network](https://arxiv.org/pdf/1312.4400.pdf)中关于架构的详细内容并没有得到广泛应用，但是 1x1 卷积的理念十分有影响力，许多神经网络架构（包括 Inception 网络）都受到它的影响。
+1. Consistency in design and framework to handle multicultural data.
+2. How will the LLL project account for differences between people in its data gathering?
+  1. The Link Lab is very diverse in terms of culture, ie we have people from many different cultures
+    1. Different cultures have different norms, how will that affect behavioral interpretation in LLL
+    2. If cultural differences are taken into consideration, how will the LLL data collection differentiate between people to determine whether a behavior falls within culture norms.
+    3. This is especially true for facial expressions
+  2. The link lab is also different in terms of race, gender, disability, sexual orientation
+    1. Will that cause variations in the data being collected?
+      1. Almost certainly, so how has that been taken into account/discussed.
+      2. How will those differences be identified in the data so it can be accounted for, if applicable.
+      3. Does that even need to be accounted for? [goes back to point 1)]
+  3. What about the differences in baseline biostats?
+    1. Ie people with BD have a different heart rate variability than non-BD people
+      1. Obviously you can&#39;t ask people about disabilities
+      2. Currently I don&#39;t think HRV is measured, but a good example
+    2. Will differences in biostats would affect the data being collected?
+      1. Goes back to transparency, what&#39;s being gathered?
+      2. Will certain medical conditions cause different levels of a biostat being measured
+    3. Can you get a baseline on the different participants to determine changes in biostats being collected
+      1. How would you ensure the privacy of such things?
+    4. Not just biostats, is vocal data being recorded?
 
-## 谷歌Inception网络简介(Inception network motivation)
+Safety of participants
 
-在之前的卷积网络中，我们只能选择单一尺寸和类型的滤波器。而 **Inception 网络的作用** 即是代替人工来确定卷积层中的过滤器尺寸与类型，或者确定是否需要创建卷积层或池化层。
+1. No harm being the best practice currently
+2. What is being done to ensure safety and wellbeing of lab residents.
+3. What are the benefits that will outweigh the risk of negative impact to residents. (transparency)
 
-基本思想是 Inception 网络不需要人为决定使用哪个过滤器或者是否需要池化，而是由网络自行确定这些参数，你可以给网络添加这些参数的所有可能值，然后把这些输出连接起来，让网络自己学习它需要什么样的参数，采用哪些过滤器组合。
+Security and Privacy
 
-![](https://raw.githubusercontent.com/AlbertHG/Coursera-Deep-Learning-deeplearning.ai/master/04-Convolutional%20Neural%20Networks/week2/md_images/14.jpg)
+1.
+  1. Physical hacks are the most obvious.
+    1. It&#39;s really easy for visitors to get let in.
+    2. Ie mitigating potential negative impacts on residents of the lab
+    3.
+    4. Should we require researchers to take a HIPPA course because of the medical data
+    5. Especially if we are also working with the hospital
 
-不过为了确保输出的矩阵的高和宽一致，需要将输入层进行padding操作，完成same卷积。不过Inception层有一个计算成本很大的问题。
 
-![](https://raw.githubusercontent.com/AlbertHG/Coursera-Deep-Learning-deeplearning.ai/master/04-Convolutional%20Neural%20Networks/week2/md_images/15.png)
 
-图中有 32 个滤波器，每个滤波器的大小为 5x5x192。输出大小为 28x28x32，所以需要计算 28x28x32 个数字，对于每个数，都要执行 5x5x192 次乘法运算。加法运算次数与乘法运算次数近似相等。因此，可以看作这一层的计算量为 28x28x32x5x5x192 = 1.2亿。
 
-为了解决计算量大的问题，可以引入 1x1 卷积来减少其计算量。
 
-![](https://raw.githubusercontent.com/AlbertHG/Coursera-Deep-Learning-deeplearning.ai/master/04-Convolutional%20Neural%20Networks/week2/md_images/16.png)
 
-对于同一个例子，我们使用 1x1 卷积把输入数据从 192 个通道减少到 16 个通道，然后对这个较小层运行 5x5 卷积，得到最终输出。这个 1x1 的卷积层通常被称作 **瓶颈层(Bottleneck layer)** 。
+The Link Lab is on the leading edge of collaborative workspaces in academic research, with the goal of improving the fields of Smart Health, Smart Cities and Autonomous Systems. As with any field leader, the studies performed by Link Lab researchers often involve topics that do not yet have best practice guidelines. In these situations, Link Lab researchers can use the guidelines from Ethically Aligned Design to form an ethical framework for their study.
 
-改进后的计算量为 28x28x192x16 + 28x28x32x5x5x15 = 1.24 千万，减少了约 90%。
 
-不想决定池化层是使用 1×1，3×3 还是 5×5 的过滤器，那么 inception 模块就是最好的选择。我们可以应用各种类型的过滤器，只需要把输出连接起来。之后我们讲到计算成本问题，我们学习了如何通过使用 1×1 卷积来构建瓶颈层，从而大大降低计算成本，
 
-也就是说，要合理构建瓶颈层，就可以既显著缩小计算规模，又不会降低网络性能。
+Ethical research is a core component of the Link Lab. In order to exemplify the pertinent principles outlined in the EAD, Link Lab researchers periodically reexamine their study designs and proposals, and alter them as needed to ensure they are meeting the Link Lab&#39;s high ethical standards. For example, Data Access is a core component of the EAD, and researchers at the Lab are improving their designs to increase participant knowledge regarding what data are being collected, as well as making it easier for participants to access their data. Allowing participants access to their own data also reduces the Risk of Misuse by an AI/S system, since the participant is able to double check its accuracy. Competency is another key component of the Link Lab, no one in the Link Lab is allowed to do research without first having done the appropriate trainings, and demonstrated the knowledge necessary to take part in the research.
 
-## Inception网络(Inception network)
+Above all other principles, the Link Lab embodies the principle of Human Rights the most. The Link Lab is full of people from many different cultures, part of its strength and success comes directly from its diversity. The culture at the Link Lab is very respectful, inclusive, and supportive, you&#39;ll often see lunch groups where everyone appears to be from different backgrounds. That respect for each other translates into our research as well. Researchers at the Link Lab strive to create studies that respect people&#39;s autonomy, especially their right to informed consent, which is a principle that people should have information about the study before they consent to take part in it. To further that end Link Lab researchers have been working on more fully integrating information regarding the purpose of the study into the study, with the goal of increasing people&#39;s ability to offer informed consent.
 
-![](https://raw.githubusercontent.com/AlbertHG/Coursera-Deep-Learning-deeplearning.ai/master/04-Convolutional%20Neural%20Networks/week2/md_images/17.jpg)
-
-为了能在最后将这些输出都连接起来，我们会使用 same 类型的 padding 来池化，使得输出的高和宽依然是 28×28 ，将这些方块全都连接起来。在这过程中，把得到的各个层的通道都加起来，最后得到一个 28×28×256 的输出。通道连接实际就是之前视频中看到过的，把所有方块连接在一起的操作。这就是一个 Inception 模块，而 Inception 网络所做的就是将这些模块都组合到一起。
-
-多个Inception 模块的堆叠构成Inception Network，下面是GoogleNet的结构：
-
-![](https://raw.githubusercontent.com/AlbertHG/Coursera-Deep-Learning-deeplearning.ai/master/04-Convolutional%20Neural%20Networks/week2/md_images/18.jpg)
-
-所以这些分支有什么用呢？在网络的最后几层，通常称为全连接层，在它之后是一个 softmax 层（编号 1）来做出预测，这些分支（编号 2）所做的就是通过隐藏层（编号 3）来做出预测，所以这其实是一个 softmax 输出（编号 2），这（编号 1）也是。这是另一条分支（编号 4），它也包含了一个隐藏层，通过一些全连接层，然后有一个 softmax 来预测，输出结果的标签。
-
-注意绿色笔圈出的隐藏层，这些分支都是 Softmax 的输出层，可以用来参与特征的计算及结果预测，起到调整并防止发生过拟合的效果。
-
-如果你理解了 Inception 模块，你就能理解 Inception 网络，无非是很多
-个 Inception 模块一环接一环，最后组成了网络。
-
-*大图展示如下：*
-
-![](https://raw.githubusercontent.com/AlbertHG/Coursera-Deep-Learning-deeplearning.ai/master/04-Convolutional%20Neural%20Networks/week2/md_images/21.png)
-
-## 使用开源的实现方案(Using open-source implementations)
-
-开发一个计算机视觉应用，一个常见的工作流程是，先选择一个喜欢的架构，或许是在这门课中学习到的，或者是你从朋友那听说的，或者是从文献中看到的，接着寻找一个开源实，从 GitHub 下载下来，以此基础开始构建。这样做的优点在于，这些网络通常都需要很长的时间来训练，而或许有人已经使用多个 GPU，通过庞大的数据集预先训练了这些网络，这样一来你就可以使用这些网络进行迁移学习。
-
-## 迁移学习(Transfer Learning)
-
-相比于从头训练权重，或者说从随机初始化权重开始，如果下载别人已经训练好网络结构的权重，通常能够进展的相当快，用这个作为预训练，然后转换到感兴趣的任务上，社区经常使用得数据集：比如 ImageNet，或者 MS COCO，或者 Pascal。
-
-在我们自己的任务中，常常遇到的情况是，在做某类物体的识别分类时，面临着数据集不够的情况，这个时候通过应用迁移学习，应用社区研究者建立的模型和参数，用少量的数据仅训练最后的自定义的softmax网络，从而能够在小数据集上达到很好的效果。
-
-不同的深度学习编程框架有不同的方式，允许你指定是否训练特定层的权重。在这个例子中，你只需要训练 Softmax 层的权重，把前面这些层的权重都冻结（而冻结的层由于不需要改变和训练，可以看作一个固定函数。可以将这个固定函数存入硬盘，以便后续使用，而不必每次再使用训练集进行训练了。）。
-
-![](https://raw.githubusercontent.com/AlbertHG/Coursera-Deep-Learning-deeplearning.ai/master/04-Convolutional%20Neural%20Networks/week2/md_images/19.jpg)
-
-1. 取输入图像 x，然后把它映射到这层（softmax的前一层，紫色线条标记的）的激活函数，计算特征或者激活值。
-2. 将这个固定函数存入硬盘（softmax 层之前的所有层视为一个固定映射）。
-3. 在此之上训练 softmax 分类器。
-
-存储到硬盘或者说预计算方法的优点就是，你不需要每次遍历训练集再重新计算这个激活值了。
-
-如果我们在自己的问题上也拥有大量的数据集，我们可以多训练后面的几层。总之随着数据集的增加，我们需要“（冻结） freeze”的层数越来越少。最后如果我们有十分庞大的数据集，那么我们可以训练网络模型的所有参数，将其他研究者训练的模型参数作为参数的初始化来替代随机初始化，来加速我们模型的训练。
-
-![](https://raw.githubusercontent.com/AlbertHG/Coursera-Deep-Learning-deeplearning.ai/master/04-Convolutional%20Neural%20Networks/week2/md_images/20.jpg)
-
-## 数据扩充(Data augmentation)
-
-计算机视觉领域的应用都需要大量的数据。当数据不够时，**数据扩增(Data Augmentation)** 就有帮助。常用的数据扩增包括：
-
-- 镜像翻转；
-- 随机裁剪；
-- 色彩转换：给 R、G 和 B 三个通道上加上不同的失真值，改变图片色调。
-    - **PCA 颜色增强** ：指更有针对性地对图片的 RGB 通道进行主成分分析(Principles Components Analysis，PCA)，对主要的通道颜色进行增加或减少，比如说，如果你的图片呈现紫色，即主要含有红色和蓝色，绿色很少，然后 PCA 颜色增强算法就会对红色和蓝色增减很多，绿色变化相对少一点，所以使总体的颜色保持一致。
-
-## 计算机视觉现状(The state of computer vision)
-
-大部分机器学习问题是介于少量数据和大量数据范围之间，也就是说，如何将少量数据训练的应用很好的运用到现实生活中去。
-
-- 当你有很多数据时，人们倾向于使用更简单的算法和更少的手工工程，因为我们不需要为这个问题精心设计特征。
-- 相反当你没有那么多的数据时，那时你会看到人们从事更多的是手工工程，低调点说就是你有很多小技巧可用。
-
-通常我们的学习算法有两种知识来源：
-1. 被标记的数据，就像(x，y)应用在监督学习。
-2. 手工工程，有很多方法去建立一个手工工程系统，它可以是源于精心设计的特征，手工精心设计的网络体系结构或者是系统的其他组件。
-
-当然，当数据量不够的时候，我们还有“迁移学习”这一个有效的办法。
-
-另外，在模型研究或者竞赛方面，有一些方法能够有助于提升神经网络模型的性能：
-
-* 集成(Ensembling)：独立地训练几个神经网络，并平均它们的输出。假设你的 7 个神经网络，它们有 7 个不同的预测，然后平均他们，这可能会让你在基准上提高 1%，2%或者更好。
-* Multi-crop at test time：将数据扩增应用到测试集，对结果进行平均。
-
-但是由于这些方法计算和内存成本较大，一般不适用于构建实际的生产项目。
+The Link Lab has done many amazing things so far, and will continue to do them in the future. Researchers in the lab are hard at work ensuring that their research designs are aligned with the ethical principles outlined in the EAD. By striving to align with the principles of the EAD, we at the Link Lab can ensure that our research follows strong ethical guidelines even at the cutting edge of our respective fields.
