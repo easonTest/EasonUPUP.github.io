@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      Ethically Aligned Design(EAD)
-subtitle:    "\"【EAD】\""
+subtitle:    "\"A Vision for Prioritizing Human Well-being with Autonomous and Intelligent Systems\""
 date:       2019-11-13
 author:     Eason
 header-img: img/caffe_mnist.jpg
@@ -15,7 +15,7 @@ tags:
 
 ## Testmonials
 
-> “As an AI designer and AI ethics advocate at IBM, I’ll be using EAD1e in scaling best practices for thousands of designers and developers. The guidance materials coming out of this will help our teams re-evaluate their current design and development processes. It’s vital to bring in different perspectives whenever we make decisions on what is or isn’t ethical– IEEE’s focus on interdisciplinary collaboration makes this work accessible to anyone working with AI.” --Milena Pribic, AI Design Practices, IBM
+> “As an AI designer and AI ethics advocate at IBM, I’ll be using EAD1e in scaling best practices for thousands of designers and developers. The guidance materials coming out of this will help our teams re-evaluate their current design and development processes. It’s vital to bring in different perspectives whenever we make decisions on what is or isn’t ethical– IEEE’s focus on interdisciplinary collaboration makes this work accessible to anyone working with AI.”       --Milena Pribic, AI Design Practices, IBM
 
 ["EAD 1st Edition"](https://ethicsinaction.ieee.org/#read)
 
@@ -24,20 +24,20 @@ tags:
 Ethically Aligned Design: A Vision for Prioritizing Human Well-being with Autonomous and Intelligent Systems, First Edition (EAD1e) is launched by the IEEE Global Initiative on Ethics of Autonomous and Intelligent Systems. It advocates that we need to establish social and policy guidelines to keep autonomous and intelligent systems (A/IS) people-centred and in line with human values and ethical principles. The development of these systems must be beneficial to humans and the environment, rather than simply achieving functional goals and solving technical problems.
 
 As the author introduced in the executive summary, there are five parts in this paper:
-###I. Purpose of Ethically Aligned Design, First Edition (EAD1e) 
+####I. Purpose of Ethically Aligned Design, First Edition (EAD1e) 
 The purpose of EAD is making a guidance for Autonomous and Intelligent Systems Design. 
 
-###II. General Principles
+####II. General Principles
 General principles are listed including human rights, well-being, data agency, effectiveness, transparency, accountability and awareness of misuse.
 
-###III. Ethical Foundations
+####III. Ethical Foundations
 This paper addresses the alleged potential for autonomous capacity of intelligent technical systems, morality in amoral systems, and exams whether decisions made by amoral systems can have moral consequences.
 
-###IV. Areas of Impact
+####IV. Areas of Impact
 Including A/IS for Sustainable Development, Personal Data Rights and Agency Over Digital Identity, Legal Frameworks for Accountability and Policies for Education and Awareness.
 
-###V. Implementation
-Well-being metrics help to find potential benefits and test the negative consequences of an accident. Embedding values into autonomous and intelligent systems are required but the using way needs discussion. Methods to guide and affective computing are mentioned that human is the priority and emotional experience cannot be affected.
+####V. Implementation
+Well-being metrics help to find potential benefits and test the negative consequences of an accident. Embedding values into autonomous and intelligent systems are required but the using way needs discussion. Methods to guide and affective computing are mentioned that human is the priority and emotional experience should not be affected.
 
 
 Autonomous and intelligent technology systems are specifically designed to reduce human intervention in our daily lives. As a result, these new systems have also drawn attention to their impact on individuals and society. Positive impacts are optimization of process and resource use, smarter planning and decision making, and identify useful patterns in big data. But there are also negative effects, such as privacy issues, discrimination, loss of skills, adverse economic impacts, security risks in critical infrastructure, and the long-term negative impact on social well-being.
