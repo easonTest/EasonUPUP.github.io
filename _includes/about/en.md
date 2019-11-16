@@ -1,1 +1,3 @@
 > Group 6 - Cybernetic
+
+The Link Lab is on the leading edge of collaborative workspaces in academic research, with the goal of improving the fields of Smart Health, Smart Cities and Autonomous Systems. As such the Link Lab has engaged in a monumental study, aimed to further current research on the ways Smart Buildings can learn from and respond to its users, creating a more comfortable and productive environment.

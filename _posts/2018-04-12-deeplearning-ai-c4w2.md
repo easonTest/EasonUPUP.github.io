@@ -42,7 +42,7 @@ Table 1a. The principles of EAD and BR [1],[2]
 
 **Ethical Analysis**
 
-_  I._ _Consent_
+I.Consent
 
 As mentioned in the BR[1] Informed consent is an essential part of human research. However, this principle appears to have been missed in the design of the LLL project [3]. While the proposal does state that the research would be IRB compliant, it does not detail how the researchers intend to do so [3]. In fact, currently there are no notifications or signs on any of the entrances to Link Lab alerting people to the fact that data are being gathered inside the building utilizing visible sensors. The lack of notice on the entrances means that individuals are not given the ability to make an informed decision about having their data collected.
 
@@ -56,7 +56,7 @@ Additionally the study design does not include plans for how to handle people wh
 
 
 
-_    II. Transparency_
+II. Transparency
 
 In addition to consent, transparency is also a core part of ethical human research, specifically transparency regarding what data is being collected, where it is being collected, and what is being done with the data. In the EAD this is the Data Agency principle, which states that all A/IS creators must ensure that individuals can access and securely share their data, allowing individuals to maintain control over their information. In the BR this concept is covered under the Respect for Persons and Informed Consent principles, which combined state that participants must be able to make informed decisions about whether they want to participant initially, and that they continuously be able to make informed decisions about what activities they want to participate in and why. Additionally individuals are who are unaware that data was collected are unable to request their data be deleted.
 
@@ -78,7 +78,7 @@ A final consideration is the effect of autonomous robots on inhabitants of the l
 
 
 
-1. _Competence and Accountability_
+1. Competence and Accountability
 
 Research requires many abilities, including the ability to recognize and account for potential bias factors. The Link Lab is a multicultural environment, with people from a multitude of countries and cultural backgrounds. Additionally there are also people of different races, religions, gender identities, sexual orientations, ages, and individuals with disabilities.  In such a diverse environment, how will the data be collected and processed in a way that will correctly account for differences caused by various factors, while still remaining deidentified? The LLL proposal doesn&#39;t have any guidelines for how they will account for cultural differences in facial expressions, or tone/cadence of vocalizations [3]. As mentioned in a previous section, HRV can differ significantly due to some mental illnesses, how will that kind of information be accounted for so it doesn&#39;t falsely skew the data? These questions are in line with two principles of the EAD, Accountability and Competence. In the EAD framework to be &#39;accountable&#39; A/IS systems are required to provide rationale for their decisions at all times; the principle of Competence states that A/IS shall adhere to the knowledge and skill required for safe operation. To better adhere to those principles, the LLL needs to have framework that will catch potential sources of unwanted variance (ie HRV differences due to medical, not environment), that way they can be excluded from the data for that particular factor.
 
@@ -183,8 +183,6 @@ Security and Privacy
     3.
     4. Should we require researchers to take a HIPPA course because of the medical data
     5. Especially if we are also working with the hospital
-
-
 
 
 
