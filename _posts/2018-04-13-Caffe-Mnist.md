@@ -24,19 +24,20 @@ tags:
 Ethically Aligned Design: A Vision for Prioritizing Human Well-being with Autonomous and Intelligent Systems, First Edition (EAD1e) is launched by the IEEE Global Initiative on Ethics of Autonomous and Intelligent Systems. It advocates that we need to establish social and policy guidelines to keep autonomous and intelligent systems (A/IS) people-centred and in line with human values and ethical principles. The development of these systems must be beneficial to humans and the environment, rather than simply achieving functional goals and solving technical problems.
 
 As the author introduced in the executive summary, there are five parts in this paper:
-####I. Purpose of Ethically Aligned Design, First Edition (EAD1e) 
+
+* I. Purpose of Ethically Aligned Design, First Edition (EAD1e) 
 The purpose of EAD is making a guidance for Autonomous and Intelligent Systems Design. 
 
-####II. General Principles
+* II. General Principles
 General principles are listed including human rights, well-being, data agency, effectiveness, transparency, accountability and awareness of misuse.
 
-####III. Ethical Foundations
+* III. Ethical Foundations
 This paper addresses the alleged potential for autonomous capacity of intelligent technical systems, morality in amoral systems, and exams whether decisions made by amoral systems can have moral consequences.
 
-####IV. Areas of Impact
+* IV. Areas of Impact
 Including A/IS for Sustainable Development, Personal Data Rights and Agency Over Digital Identity, Legal Frameworks for Accountability and Policies for Education and Awareness.
 
-####V. Implementation
+* V. Implementation
 Well-being metrics help to find potential benefits and test the negative consequences of an accident. Embedding values into autonomous and intelligent systems are required but the using way needs discussion. Methods to guide and affective computing are mentioned that human is the priority and emotional experience should not be affected.
 
 
@@ -46,5 +47,9 @@ Design, development and implementation of autonomous and intelligent systems(A/I
 
 Psychological, social, economic fairness, and environmental factors should be the well-being metrics for autonomous and intelligent systems to provably advance a specific benefit for humanity.  A/IS should follow the community’s social and moral norms. Human progress must be placed at the heart of the development of technological systems. This must be achieved in recognition of the fact that the machine should serve humans, not the other way around. Autonomy and intelligent systems should not cause damage by expanding or weakening the emotional experience of human beings.
 
+## Some useful links to other resources
+* ["The IEEE Global Initiative on Ethics of Autonomous and Intelligent Systems"](https://standards.ieee.org/industry-connections/ec/autonomous-systems.html)
+* ["(YouTube)Ethically Aligned Design: Prioritizing Wellbeing for AI and Autonomous Systems Webinar Replay"](https://www.youtube.com/watch?v=elcDG5lB5XQ)
+* ["AI: Focus Turns to Ethical Standards for Intelligent Systems"](https://www.informationweek.com/strategic-cio/executive-insights-and-innovation/ai-focus-turns-to-ethical-standards-for-intelligent-systems/a/d-id/1334515)
 
 > Thank you for your reading!!!
