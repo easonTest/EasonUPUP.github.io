@@ -1,83 +1,23 @@
-# Site settings
-title: UVA CPS
-SEOTitle: TEST|UVA CPS
-header-img: img/pagehome2.jpg
-email: eason1chen@gmail.com
-description: "Hello World"
-keyword: "Page Home"
-url: "https://easonupup.github.io/"          # your host, for absolute URL
-baseurl: ""      # for example, '/blog' if your blog hosted on 'host/blog'
-github_repo: "https://github.com/EasonUPUP/EasonUPUP.github.io.git" # you code repository
+title:              Jiajia Liang
+email:              jl9pg@virginia.edu
+description:        A Blog Theme by Start Bootstrap
+author:             Jiajia Liang
+baseurl:            ""
+url:                "https://eason1chen.github.io"
 
-
-# Sidebar settings
-sidebar: true                           # whether or not using Sidebar.
-sidebar-about-description: "From University of Virginia"
-sidebar-avatar: /img/myP.JPG     # use absolute URL, seeing it's used in both `/` and `/about/`
-
-
-# SNS settings
-RSS: false
-# weibo_username:     123
-#zhihu_username:     1123
+# Social Profiles
 github_username:    EasonUPUP
-#facebook_username:  123
-#jianshu_username:   123
-#twitter_username:   123
+facebook_username:  100010064949119
+linkedin_username:  jiajia-liang-296842174
+
+# Add your google-analytics ID here to activate google analytics
+# google_analytics:   UA-XXXXXXXXX-X # out your google-analytics code
 
 # Build settings
-# from 2016, 'pygments' is unsupported on GitHub Pages. Use 'rouge' for highlighting instead.
-permalink: pretty
-paginate: 9
-exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
-anchorjs: true                          # if you want to customize anchor. check out line:181 of `post.html`
-
-# Gems
-# from PR#40, to support local preview for Jekyll 3.0
-gems: [jekyll-paginate]
-
-
-# Markdown settings
-# replace redcarpet to kramdown,
-# although redcarpet can auto highlight code, the lack of header-id make the catalog impossible, so I switch to kramdown
-# document: http://jekyllrb.com/docs/configuration/#kramdown
-markdown: kramdown
-highlighter: rouge
-kramdown:
-  input: GFM                            # use Github Flavored Markdown !important
-
-# Gitalk
-gitalk:
-  enable: true    #是否开启Gitalk评论
-  clientID: 60766904dab560d85c4d                            #生成的clientID
-  clientSecret: 023a62f9067c73d7a1bc3993307063633dba3e6b   #生成的clientSecret
-  repo: easonupup.github.io    #仓库名称
-  owner: easonupup    #github用户名
-  admin: easonupup
-  distractionFreeMode: true ##是否启用类似FB的阴影遮罩
-
-
-# 统计
-
-# Google Analytics
-ga_track_id: 'UA-117352143-1'            # Format: UA-xxxxxx-xx
-ga_domain: auto               #  默认的是 auto
-
-# Featured Tags
-featured-tags: true                     # 是否使用首页标签
-featured-condition-size: 2              # 相同标签数量大于这个数，才会出现在首页
-
-# Progressive Web Apps
-chrome-tab-theme-color: "#000000"
-service-worker: true
-
-# Friends
-friends: [
-    {
-        title: "EasonUPUP's Blog",
-        href: "https://easonupup.github.io/"
-    },{
-        title: "Google",
-        href: "https://www.google.com"
-    }
-]
+markdown:           kramdown
+paginate:           5
+paginate_path:      "/posts/page:num/"
+plugins:
+  - jekyll-feed
+  - jekyll-paginate
+  - jekyll-sitemap ## Uncomment this line to silently generate a sitemaps.org compliant sitemap for your Jekyll site
